@@ -80,6 +80,20 @@ namespace pryPozzoSp2
                 lstTarjetas.Enabled=false;
             }
         }
+
+        private void lstTarjetas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstTarjetas.SelectedIndex != -1)
+            {
+                txtNombre.Enabled = true;
+                txtTelefono.Enabled = true;
+            }
+            else
+            {
+                txtNombre.Enabled = false;
+                txtTelefono.Enabled = false;
+            }
+        }
     }
     
 }

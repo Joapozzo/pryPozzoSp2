@@ -238,6 +238,7 @@
             this.lstTarjetas.Name = "lstTarjetas";
             this.lstTarjetas.Size = new System.Drawing.Size(121, 21);
             this.lstTarjetas.TabIndex = 0;
+            this.lstTarjetas.SelectedIndexChanged += new System.EventHandler(this.lstTarjetas_SelectedIndexChanged);
             // 
             // mrcTitular
             // 

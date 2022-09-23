@@ -30,6 +30,25 @@ namespace pryPozzoSp2
             {
                 lstPersonas.Enabled=false;
             }
+            if (lstTipo.Text == "A")
+            {
+                lstPersonas.Items.Clear();
+                lstPersonas.Items.Add(1);
+                lstPersonas.Items.Add(2);
+                lstPersonas.Items.Add(3);
+                lstPersonas.Items.Add(4);
+            }
+            if (lstTipo.Text == "B")
+            {
+                lstPersonas.Items.Clear();
+                lstPersonas.Items.Add(1);
+                lstPersonas.Items.Add(2);
+                lstPersonas.Items.Add(3);
+                lstPersonas.Items.Add(4);
+                lstPersonas.Items.Add(5);
+                lstPersonas.Items.Add(6);
+            }
+
         }
 
         private void lstPersonas_SelectedIndexChanged(object sender, EventArgs e)
@@ -56,6 +75,8 @@ namespace pryPozzoSp2
                 mrcAdicionales.Enabled = false;
                 mrcPago.Enabled = false;
             }
+            
+
 
         }
 
@@ -66,7 +87,16 @@ namespace pryPozzoSp2
 
         private void optEfectivo_CheckedChanged(object sender, EventArgs e)
         {
-            
+            if (optEfectivo.Checked)
+            {
+                txtNombre.Enabled = true;
+                txtTelefono.Enabled = true;
+            }
+            else
+            {
+                txtNombre.Enabled = false;
+                txtTelefono.Enabled =false;
+            }
         }
 
         private void optTarjeta_CheckedChanged(object sender, EventArgs e)
@@ -93,6 +123,32 @@ namespace pryPozzoSp2
                 txtNombre.Enabled = false;
                 txtTelefono.Enabled = false;
             }
+            
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDias_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Ingrese unicamente numeros");
+
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            if (lstTipo.SelectedIndex != -1) && ()
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            lblResumen.Text = lstTipo.Text + ", " + lstPersonas.Text + ", "; txtDias.Text + ", ";
         }
     }
     

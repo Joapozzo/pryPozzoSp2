@@ -50,6 +50,8 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.lblResumen = new System.Windows.Forms.Label();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.mrcTipo.SuspendLayout();
             this.mrcAdicionales.SuspendLayout();
             this.mrcPago.SuspendLayout();
@@ -76,10 +78,6 @@
             this.lstPersonas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lstPersonas.Enabled = false;
             this.lstPersonas.FormattingEnabled = true;
-            this.lstPersonas.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
             this.lstPersonas.Location = new System.Drawing.Point(216, 40);
             this.lstPersonas.Name = "lstPersonas";
             this.lstPersonas.Size = new System.Drawing.Size(96, 21);
@@ -92,8 +90,7 @@
             this.lstTipo.FormattingEnabled = true;
             this.lstTipo.Items.AddRange(new object[] {
             "A",
-            "B",
-            "C"});
+            "B"});
             this.lstTipo.Location = new System.Drawing.Point(47, 40);
             this.lstTipo.Name = "lstTipo";
             this.lstTipo.Size = new System.Drawing.Size(88, 21);
@@ -108,6 +105,7 @@
             this.txtDias.Size = new System.Drawing.Size(107, 20);
             this.txtDias.TabIndex = 7;
             this.txtDias.TextChanged += new System.EventHandler(this.txtDias_TextChanged);
+            this.txtDias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDias_KeyPress);
             // 
             // lblTipo
             // 
@@ -234,6 +232,10 @@
             this.lstTarjetas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lstTarjetas.Enabled = false;
             this.lstTarjetas.FormattingEnabled = true;
+            this.lstTarjetas.Items.AddRange(new object[] {
+            "VISA",
+            "MASTERCARD",
+            "CORDOBESA"});
             this.lstTarjetas.Location = new System.Drawing.Point(126, 53);
             this.lstTarjetas.Name = "lstTarjetas";
             this.lstTarjetas.Size = new System.Drawing.Size(121, 21);
@@ -246,7 +248,6 @@
             this.mrcTitular.Controls.Add(this.txtNombre);
             this.mrcTitular.Controls.Add(this.lblTelefono);
             this.mrcTitular.Controls.Add(this.lblNombre);
-            this.mrcTitular.Enabled = false;
             this.mrcTitular.Location = new System.Drawing.Point(12, 273);
             this.mrcTitular.Name = "mrcTitular";
             this.mrcTitular.Size = new System.Drawing.Size(512, 120);
@@ -269,6 +270,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(168, 20);
             this.txtNombre.TabIndex = 5;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // lblTelefono
             // 
@@ -288,11 +290,32 @@
             this.lblNombre.TabIndex = 3;
             this.lblNombre.Text = "Nombre";
             // 
+            // lblResumen
+            // 
+            this.lblResumen.AutoSize = true;
+            this.lblResumen.Location = new System.Drawing.Point(553, 56);
+            this.lblResumen.Name = "lblResumen";
+            this.lblResumen.Size = new System.Drawing.Size(0, 13);
+            this.lblResumen.TabIndex = 7;
+            this.lblResumen.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Location = new System.Drawing.Point(449, 415);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.TabIndex = 8;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
             // frmCabañas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAceptar);
+            this.Controls.Add(this.lblResumen);
             this.Controls.Add(this.mrcTitular);
             this.Controls.Add(this.mrcPago);
             this.Controls.Add(this.mrcAdicionales);
@@ -310,6 +333,7 @@
             this.mrcTitular.ResumeLayout(false);
             this.mrcTitular.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -336,6 +360,8 @@
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.ComboBox lstPersonas;
+        private System.Windows.Forms.Label lblResumen;
+        private System.Windows.Forms.Button btnAceptar;
     }
 }
 

@@ -152,38 +152,40 @@ namespace pryPozzoSp2
         {
             int cont = 0;
 
+            lblResumen.Text = "";
             if (txtNombre.Text != "" && txtTelefono.Text != "" && lstTipo.SelectedIndex != -1 && lstPersonas.SelectedIndex != -1 && txtDias.Text != "")
             {
-                lblResumen.Text = "\n" + "Nombre: " + txtNombre.Text + "\n" + "Telefono: " + txtTelefono.Text + "\n" + "Tipo de cabaña: " + lstTipo.Text + "\n" + "Cantidad de personas: "
+                lblResumen.Text += "RECIBO" + "\n" + "Nombre: " + txtNombre.Text + "\n" + "Telefono: " + txtTelefono.Text + "\n" + "Tipo de cabaña: " + lstTipo.Text + "\n" + "Cantidad de personas: "
                     + lstPersonas.Text + "\n" + "Cantidad de dias: " + txtDias.Text;
             }
             if (chkCocina.Checked==true) 
             {
                 cont++;
             }
-            if (chkHeladera.Checked==true)
-            {  cont++;
-
+            if (chkTelevision.Checked==true)
+            {  
+                cont++;
             }
             if (chkHeladera.Checked == true)
             {
                 cont++;
             }
-            lblResumen2.Text = "Ha seleccionado " + cont + " Adicionales"; 
+            lblResumen.Text += "\nHa seleccionado " + cont + " Adicionales"; 
 
 
             if (optEfectivo.Checked == true)
             {
-                lblResumen3.Text = "Forma de pago: " + "Efectivo";
+                lblResumen.Text += "\nForma de pago: " + "Efectivo";
             }
             else
             {
                 if (optTarjeta.Checked == true && lstTarjetas.SelectedIndex ==1 || lstTarjetas.SelectedIndex == 2 || lstTarjetas.SelectedIndex == 0)
                 {
-                    lblResumen3.Text = "Forma de pago: " + "Tarjeta" + " " + this.lstTarjetas.Text;
+                    lblResumen.Text += "\nForma de pago: " + "Tarjeta" + " " + this.lstTarjetas.Text;
                 }
             }
-            }
+
+        }
 
 
         private void txtTelefono_TextChanged(object sender, EventArgs e)
@@ -212,12 +214,17 @@ namespace pryPozzoSp2
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 64 || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <255)))
+            if ((e.KeyChar >= 31 && e.KeyChar <= 64 || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <255)))
             {
                 e.Handled = true;
                 MessageBox.Show("Ingrese unicamente letras");
 
             }
+        }
+
+        private void frmCabañas_Load(object sender, EventArgs e)
+        {
+
         }
     }
 

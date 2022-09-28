@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCabañas));
             this.mrcTipo = new System.Windows.Forms.GroupBox();
             this.lstPersonas = new System.Windows.Forms.ComboBox();
             this.lstTipo = new System.Windows.Forms.ComboBox();
@@ -52,6 +51,8 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblResumen = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.lblResumen2 = new System.Windows.Forms.Label();
+            this.lblResumen3 = new System.Windows.Forms.Label();
             this.mrcTipo.SuspendLayout();
             this.mrcAdicionales.SuspendLayout();
             this.mrcPago.SuspendLayout();
@@ -66,9 +67,11 @@
             this.mrcTipo.Controls.Add(this.lblTipo);
             this.mrcTipo.Controls.Add(this.lblPersonas);
             this.mrcTipo.Controls.Add(this.lblDia);
-            this.mrcTipo.Location = new System.Drawing.Point(12, 12);
+            this.mrcTipo.Location = new System.Drawing.Point(16, 15);
+            this.mrcTipo.Margin = new System.Windows.Forms.Padding(4);
             this.mrcTipo.Name = "mrcTipo";
-            this.mrcTipo.Size = new System.Drawing.Size(512, 110);
+            this.mrcTipo.Padding = new System.Windows.Forms.Padding(4);
+            this.mrcTipo.Size = new System.Drawing.Size(683, 135);
             this.mrcTipo.TabIndex = 0;
             this.mrcTipo.TabStop = false;
             this.mrcTipo.Text = "Tipo de Cabaña";
@@ -78,9 +81,10 @@
             this.lstPersonas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lstPersonas.Enabled = false;
             this.lstPersonas.FormattingEnabled = true;
-            this.lstPersonas.Location = new System.Drawing.Point(216, 40);
+            this.lstPersonas.Location = new System.Drawing.Point(288, 49);
+            this.lstPersonas.Margin = new System.Windows.Forms.Padding(4);
             this.lstPersonas.Name = "lstPersonas";
-            this.lstPersonas.Size = new System.Drawing.Size(96, 21);
+            this.lstPersonas.Size = new System.Drawing.Size(127, 24);
             this.lstPersonas.TabIndex = 9;
             this.lstPersonas.SelectedIndexChanged += new System.EventHandler(this.lstPersonas_SelectedIndexChanged);
             // 
@@ -91,18 +95,20 @@
             this.lstTipo.Items.AddRange(new object[] {
             "A",
             "B"});
-            this.lstTipo.Location = new System.Drawing.Point(47, 40);
+            this.lstTipo.Location = new System.Drawing.Point(63, 49);
+            this.lstTipo.Margin = new System.Windows.Forms.Padding(4);
             this.lstTipo.Name = "lstTipo";
-            this.lstTipo.Size = new System.Drawing.Size(88, 21);
+            this.lstTipo.Size = new System.Drawing.Size(116, 24);
             this.lstTipo.TabIndex = 8;
             this.lstTipo.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // txtDias
             // 
             this.txtDias.Enabled = false;
-            this.txtDias.Location = new System.Drawing.Point(377, 40);
+            this.txtDias.Location = new System.Drawing.Point(503, 49);
+            this.txtDias.Margin = new System.Windows.Forms.Padding(4);
             this.txtDias.Name = "txtDias";
-            this.txtDias.Size = new System.Drawing.Size(107, 20);
+            this.txtDias.Size = new System.Drawing.Size(141, 22);
             this.txtDias.TabIndex = 7;
             this.txtDias.TextChanged += new System.EventHandler(this.txtDias_TextChanged);
             this.txtDias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDias_KeyPress);
@@ -110,18 +116,20 @@
             // lblTipo
             // 
             this.lblTipo.AutoSize = true;
-            this.lblTipo.Location = new System.Drawing.Point(6, 44);
+            this.lblTipo.Location = new System.Drawing.Point(8, 54);
+            this.lblTipo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(28, 13);
+            this.lblTipo.Size = new System.Drawing.Size(35, 16);
             this.lblTipo.TabIndex = 2;
             this.lblTipo.Text = "Tipo";
             // 
             // lblPersonas
             // 
             this.lblPersonas.AutoSize = true;
-            this.lblPersonas.Location = new System.Drawing.Point(159, 44);
+            this.lblPersonas.Location = new System.Drawing.Point(212, 54);
+            this.lblPersonas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPersonas.Name = "lblPersonas";
-            this.lblPersonas.Size = new System.Drawing.Size(51, 13);
+            this.lblPersonas.Size = new System.Drawing.Size(65, 16);
             this.lblPersonas.TabIndex = 1;
             this.lblPersonas.Text = "Personas";
             this.lblPersonas.Click += new System.EventHandler(this.label2_Click);
@@ -129,18 +137,20 @@
             // lblDia
             // 
             this.lblDia.AutoSize = true;
-            this.lblDia.Location = new System.Drawing.Point(343, 44);
+            this.lblDia.Location = new System.Drawing.Point(457, 54);
+            this.lblDia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDia.Name = "lblDia";
-            this.lblDia.Size = new System.Drawing.Size(28, 13);
+            this.lblDia.Size = new System.Drawing.Size(35, 16);
             this.lblDia.TabIndex = 0;
             this.lblDia.Text = "Dias";
             // 
             // chkCocina
             // 
             this.chkCocina.AutoSize = true;
-            this.chkCocina.Location = new System.Drawing.Point(6, 35);
+            this.chkCocina.Location = new System.Drawing.Point(8, 43);
+            this.chkCocina.Margin = new System.Windows.Forms.Padding(4);
             this.chkCocina.Name = "chkCocina";
-            this.chkCocina.Size = new System.Drawing.Size(59, 17);
+            this.chkCocina.Size = new System.Drawing.Size(71, 20);
             this.chkCocina.TabIndex = 3;
             this.chkCocina.Text = "Cocina";
             this.chkCocina.UseVisualStyleBackColor = true;
@@ -151,9 +161,11 @@
             this.mrcAdicionales.Controls.Add(this.chkHeladera);
             this.mrcAdicionales.Controls.Add(this.chkCocina);
             this.mrcAdicionales.Enabled = false;
-            this.mrcAdicionales.Location = new System.Drawing.Point(12, 138);
+            this.mrcAdicionales.Location = new System.Drawing.Point(16, 170);
+            this.mrcAdicionales.Margin = new System.Windows.Forms.Padding(4);
             this.mrcAdicionales.Name = "mrcAdicionales";
-            this.mrcAdicionales.Size = new System.Drawing.Size(175, 120);
+            this.mrcAdicionales.Padding = new System.Windows.Forms.Padding(4);
+            this.mrcAdicionales.Size = new System.Drawing.Size(233, 148);
             this.mrcAdicionales.TabIndex = 3;
             this.mrcAdicionales.TabStop = false;
             this.mrcAdicionales.Text = "Adicionales";
@@ -161,9 +173,10 @@
             // chkTelevision
             // 
             this.chkTelevision.AutoSize = true;
-            this.chkTelevision.Location = new System.Drawing.Point(6, 81);
+            this.chkTelevision.Location = new System.Drawing.Point(8, 100);
+            this.chkTelevision.Margin = new System.Windows.Forms.Padding(4);
             this.chkTelevision.Name = "chkTelevision";
-            this.chkTelevision.Size = new System.Drawing.Size(74, 17);
+            this.chkTelevision.Size = new System.Drawing.Size(92, 20);
             this.chkTelevision.TabIndex = 5;
             this.chkTelevision.Text = "Television";
             this.chkTelevision.UseVisualStyleBackColor = true;
@@ -171,9 +184,10 @@
             // chkHeladera
             // 
             this.chkHeladera.AutoSize = true;
-            this.chkHeladera.Location = new System.Drawing.Point(6, 58);
+            this.chkHeladera.Location = new System.Drawing.Point(8, 71);
+            this.chkHeladera.Margin = new System.Windows.Forms.Padding(4);
             this.chkHeladera.Name = "chkHeladera";
-            this.chkHeladera.Size = new System.Drawing.Size(69, 17);
+            this.chkHeladera.Size = new System.Drawing.Size(86, 20);
             this.chkHeladera.TabIndex = 4;
             this.chkHeladera.Text = "Heladera";
             this.chkHeladera.UseVisualStyleBackColor = true;
@@ -185,9 +199,11 @@
             this.mrcPago.Controls.Add(this.lblTarjetas);
             this.mrcPago.Controls.Add(this.lstTarjetas);
             this.mrcPago.Enabled = false;
-            this.mrcPago.Location = new System.Drawing.Point(222, 138);
+            this.mrcPago.Location = new System.Drawing.Point(296, 170);
+            this.mrcPago.Margin = new System.Windows.Forms.Padding(4);
             this.mrcPago.Name = "mrcPago";
-            this.mrcPago.Size = new System.Drawing.Size(302, 120);
+            this.mrcPago.Padding = new System.Windows.Forms.Padding(4);
+            this.mrcPago.Size = new System.Drawing.Size(403, 148);
             this.mrcPago.TabIndex = 6;
             this.mrcPago.TabStop = false;
             this.mrcPago.Text = "Formas de pago";
@@ -196,9 +212,10 @@
             // optTarjeta
             // 
             this.optTarjeta.AutoSize = true;
-            this.optTarjeta.Location = new System.Drawing.Point(6, 57);
+            this.optTarjeta.Location = new System.Drawing.Point(8, 70);
+            this.optTarjeta.Margin = new System.Windows.Forms.Padding(4);
             this.optTarjeta.Name = "optTarjeta";
-            this.optTarjeta.Size = new System.Drawing.Size(58, 17);
+            this.optTarjeta.Size = new System.Drawing.Size(71, 20);
             this.optTarjeta.TabIndex = 5;
             this.optTarjeta.TabStop = true;
             this.optTarjeta.Text = "Tarjeta";
@@ -208,9 +225,10 @@
             // optEfectivo
             // 
             this.optEfectivo.AutoSize = true;
-            this.optEfectivo.Location = new System.Drawing.Point(6, 34);
+            this.optEfectivo.Location = new System.Drawing.Point(8, 42);
+            this.optEfectivo.Margin = new System.Windows.Forms.Padding(4);
             this.optEfectivo.Name = "optEfectivo";
-            this.optEfectivo.Size = new System.Drawing.Size(64, 17);
+            this.optEfectivo.Size = new System.Drawing.Size(76, 20);
             this.optEfectivo.TabIndex = 4;
             this.optEfectivo.TabStop = true;
             this.optEfectivo.Text = "Efectivo";
@@ -220,9 +238,10 @@
             // lblTarjetas
             // 
             this.lblTarjetas.AutoSize = true;
-            this.lblTarjetas.Location = new System.Drawing.Point(123, 34);
+            this.lblTarjetas.Location = new System.Drawing.Point(164, 42);
+            this.lblTarjetas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTarjetas.Name = "lblTarjetas";
-            this.lblTarjetas.Size = new System.Drawing.Size(45, 13);
+            this.lblTarjetas.Size = new System.Drawing.Size(57, 16);
             this.lblTarjetas.TabIndex = 3;
             this.lblTarjetas.Text = "Tarjetas";
             this.lblTarjetas.Click += new System.EventHandler(this.label4_Click);
@@ -236,9 +255,10 @@
             "VISA",
             "MASTERCARD",
             "CORDOBESA"});
-            this.lstTarjetas.Location = new System.Drawing.Point(126, 53);
+            this.lstTarjetas.Location = new System.Drawing.Point(168, 65);
+            this.lstTarjetas.Margin = new System.Windows.Forms.Padding(4);
             this.lstTarjetas.Name = "lstTarjetas";
-            this.lstTarjetas.Size = new System.Drawing.Size(121, 21);
+            this.lstTarjetas.Size = new System.Drawing.Size(160, 24);
             this.lstTarjetas.TabIndex = 0;
             this.lstTarjetas.SelectedIndexChanged += new System.EventHandler(this.lstTarjetas_SelectedIndexChanged);
             // 
@@ -248,9 +268,11 @@
             this.mrcTitular.Controls.Add(this.txtNombre);
             this.mrcTitular.Controls.Add(this.lblTelefono);
             this.mrcTitular.Controls.Add(this.lblNombre);
-            this.mrcTitular.Location = new System.Drawing.Point(12, 273);
+            this.mrcTitular.Location = new System.Drawing.Point(16, 336);
+            this.mrcTitular.Margin = new System.Windows.Forms.Padding(4);
             this.mrcTitular.Name = "mrcTitular";
-            this.mrcTitular.Size = new System.Drawing.Size(512, 120);
+            this.mrcTitular.Padding = new System.Windows.Forms.Padding(4);
+            this.mrcTitular.Size = new System.Drawing.Size(683, 148);
             this.mrcTitular.TabIndex = 6;
             this.mrcTitular.TabStop = false;
             this.mrcTitular.Text = "Titular de la Reserva";
@@ -258,69 +280,97 @@
             // txtTelefono
             // 
             this.txtTelefono.Enabled = false;
-            this.txtTelefono.Location = new System.Drawing.Point(64, 80);
+            this.txtTelefono.Location = new System.Drawing.Point(85, 98);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(168, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(223, 22);
             this.txtTelefono.TabIndex = 6;
+            this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtNombre
             // 
             this.txtNombre.Enabled = false;
-            this.txtNombre.Location = new System.Drawing.Point(64, 37);
+            this.txtNombre.Location = new System.Drawing.Point(85, 46);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(168, 20);
+            this.txtNombre.Size = new System.Drawing.Size(223, 22);
             this.txtNombre.TabIndex = 5;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(6, 83);
+            this.lblTelefono.Location = new System.Drawing.Point(8, 102);
+            this.lblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(49, 13);
+            this.lblTelefono.Size = new System.Drawing.Size(61, 16);
             this.lblTelefono.TabIndex = 4;
             this.lblTelefono.Text = "Telefono";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(6, 40);
+            this.lblNombre.Location = new System.Drawing.Point(8, 49);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.Size = new System.Drawing.Size(56, 16);
             this.lblNombre.TabIndex = 3;
             this.lblNombre.Text = "Nombre";
             // 
             // lblResumen
             // 
             this.lblResumen.AutoSize = true;
-            this.lblResumen.Location = new System.Drawing.Point(553, 56);
+            this.lblResumen.Location = new System.Drawing.Point(769, 26);
+            this.lblResumen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblResumen.Name = "lblResumen";
-            this.lblResumen.Size = new System.Drawing.Size(0, 13);
+            this.lblResumen.Size = new System.Drawing.Size(0, 16);
             this.lblResumen.TabIndex = 7;
             this.lblResumen.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(449, 415);
+            this.btnAceptar.Enabled = false;
+            this.btnAceptar.Location = new System.Drawing.Point(599, 511);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.Size = new System.Drawing.Size(100, 28);
             this.btnAceptar.TabIndex = 8;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
+            // lblResumen2
+            // 
+            this.lblResumen2.AutoSize = true;
+            this.lblResumen2.Location = new System.Drawing.Point(769, 128);
+            this.lblResumen2.Name = "lblResumen2";
+            this.lblResumen2.Size = new System.Drawing.Size(0, 16);
+            this.lblResumen2.TabIndex = 9;
+            // 
+            // lblResumen3
+            // 
+            this.lblResumen3.AutoSize = true;
+            this.lblResumen3.Location = new System.Drawing.Point(769, 159);
+            this.lblResumen3.Name = "lblResumen3";
+            this.lblResumen3.Size = new System.Drawing.Size(0, 16);
+            this.lblResumen3.TabIndex = 10;
+            // 
             // frmCabañas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.lblResumen3);
+            this.Controls.Add(this.lblResumen2);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblResumen);
             this.Controls.Add(this.mrcTitular);
             this.Controls.Add(this.mrcPago);
             this.Controls.Add(this.mrcAdicionales);
             this.Controls.Add(this.mrcTipo);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCabañas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reserva de Cabañas CASLA";
@@ -362,6 +412,8 @@
         private System.Windows.Forms.ComboBox lstPersonas;
         private System.Windows.Forms.Label lblResumen;
         private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Label lblResumen2;
+        private System.Windows.Forms.Label lblResumen3;
     }
 }
 
